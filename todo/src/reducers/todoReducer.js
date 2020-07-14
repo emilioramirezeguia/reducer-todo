@@ -1,4 +1,4 @@
-const initialState = [
+const initialTodos = [
   {
     item: "Learn about reducers",
     completed: false,
@@ -28,9 +28,11 @@ const reducer = (state, action) => {
           return todo;
         }
       });
+    case "CLEAR_COMPLETED":
+      return state.filter((todo) => !todo.completed);
     default:
       return state;
   }
 };
 
-export { initialState, reducer };
+export { initialTodos, reducer };

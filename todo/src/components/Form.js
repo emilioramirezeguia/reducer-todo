@@ -10,6 +10,10 @@ function Form(props) {
     setItem("");
   };
 
+  const clearCompleted = () => {
+    props.dispatch({ type: "CLEAR_COMPLETED" });
+  };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -23,6 +27,7 @@ function Form(props) {
         />
         <button>Add item</button>
       </form>
+      <button onClick={clearCompleted}>Clear completed</button>
     </div>
   );
 }
