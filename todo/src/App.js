@@ -1,11 +1,12 @@
 import React from "react";
-import { initialState, reducer } from "./reducers/todoReducer";
+import TodoList from "./components/TodoList";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello world!</h1>
+      <h1>Today's Todos</h1>
+      <TodoList />
     </div>
   );
 }
